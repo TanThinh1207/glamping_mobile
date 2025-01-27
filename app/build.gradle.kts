@@ -1,3 +1,5 @@
+import com.android.build.api.variant.BuildConfigField
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -10,7 +12,11 @@ android {
     namespace = "com.avocado.glamping"
     compileSdk = 35
 
+
     defaultConfig {
+        buildFeatures{
+            buildConfig = true
+        }
         applicationId = "com.avocado.glamping"
         minSdk = 24
         targetSdk = 35
@@ -18,6 +24,13 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    task("replaceIpInNetworkConfig"){
+        doLast{
+
+        }
     }
 
     buildTypes {
@@ -28,6 +41,7 @@ android {
                 "proguard-rules.pro"
             )
         }
+
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11

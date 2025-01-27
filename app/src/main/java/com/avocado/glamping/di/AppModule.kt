@@ -1,6 +1,7 @@
 package com.avocado.glamping.di
 
 import com.avocado.glamping.data.model.network.LoginApiService
+import com.avocado.glamping.data.model.network.RegisterApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -16,6 +17,7 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
+
     @Provides
     @Singleton
     fun provideRetrofit(): Retrofit{
@@ -28,7 +30,7 @@ object AppModule {
             .build()
 
         return Retrofit.Builder()
-            .baseUrl("http://192.168.96.167:8080/")
+            .baseUrl("http://192.168.228.167:8080/")
             .client(client)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
@@ -38,5 +40,11 @@ object AppModule {
     @Singleton
     fun provideLoginApiService(retrofit: Retrofit): LoginApiService{
         return retrofit.create(LoginApiService::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideRegisterApiService(retrofit: Retrofit): RegisterApiService{
+        return retrofit.create(RegisterApiService::class.java)
     }
 }
