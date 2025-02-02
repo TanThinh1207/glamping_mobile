@@ -1,4 +1,5 @@
 import com.android.build.api.variant.BuildConfigField
+import org.jetbrains.kotlin.gradle.plugin.extraProperties
 
 plugins {
     id("com.android.application")
@@ -25,6 +26,9 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
+
+        buildConfigField("String", "API_URL", project.properties["API_URL"].toString())
+        buildConfigField("String", "DOMAIN", project.properties["DOMAIN"].toString())
     }
 
     task("replaceIpInNetworkConfig"){
@@ -40,6 +44,8 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+
+
         }
 
     }
@@ -67,8 +73,9 @@ dependencies {
     kapt("com.google.dagger:hilt-compiler:2.51.1") // Use the latest version
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1") // Or the latest version
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.5.1")
-    implementation("androidx.navigation:navigation-fragment-ktx:2.4.2")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.8.6")
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
+    implementation("androidx.navigation:navigation-compose:2.8.6")
 
 }
 

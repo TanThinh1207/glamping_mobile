@@ -1,5 +1,6 @@
 package com.avocado.glamping.di
 
+import com.avocado.glamping.BuildConfig
 import com.avocado.glamping.data.model.network.LoginApiService
 import com.avocado.glamping.data.model.network.RegisterApiService
 import dagger.Module
@@ -17,6 +18,8 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
+    private val API_URL = BuildConfig.API_URL
+    private val DOMAIN = BuildConfig.DOMAIN
 
     @Provides
     @Singleton
@@ -27,10 +30,22 @@ object AppModule {
 
         val client = OkHttpClient.Builder()
             .addInterceptor(loggingInterceptor)  // Add the interceptor here
+            .addInterceptor{ chain ->
+                var originalRequest = chain.request()
+
+                val domain = DOMAIN
+                val newUrl = originalRequest.url.newBuilder()
+                    .host(domain)
+                    .scheme("http")
+                    .build()
+
+                originalRequest = originalRequest.newBuilder().url(newUrl).build()
+                chain.proceed(originalRequest)
+            }
             .build()
 
         return Retrofit.Builder()
-            .baseUrl("http://192.168.228.167:8080/")
+            .baseUrl(API_URL)
             .client(client)
             .addConverterFactory(GsonConverterFactory.create())
             .build()

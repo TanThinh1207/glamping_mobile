@@ -7,8 +7,6 @@ import androidx.lifecycle.viewModelScope
 import com.avocado.glamping.data.model.resp.LoginResponse
 import com.avocado.glamping.repository.LoginRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
