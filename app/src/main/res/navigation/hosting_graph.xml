@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hosting_graph"
+    app:startDestination="@id/bookingFragment">
+
+    <fragment
+        android:id="@+id/bookingFragment"
+        android:name="com.avocado.glamping.fragment.hosting.BookingFragment"
+        android:label="BookingFragment"
+        tools:layout="@layout/booking_fragment"/>
+    <fragment
+        android:id="@+id/campSiteFragment"
+        android:name="com.avocado.glamping.fragment.hosting.CampSiteFragment"
+        android:label="CampSiteFragment"
+        tools:layout="@layout/camp_site_fragment"/>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.avocado.glamping.fragment.hosting.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/profile_fragment"/>
+</navigation>

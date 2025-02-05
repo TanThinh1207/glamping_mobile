@@ -76,6 +76,7 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.8.6")
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
     implementation("androidx.navigation:navigation-compose:2.8.6")
+    implementation("androidx.navigation:navigation-ui-ktx:2.8.6")
 
 }
 

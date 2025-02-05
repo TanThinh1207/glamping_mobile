@@ -1,10 +1,8 @@
-package com.avocado.glamping.fragment
+package com.avocado.glamping.fragment.authentication
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -15,7 +13,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.avocado.glamping.R
-import com.avocado.glamping.activity.UserCampActivity
+import com.avocado.glamping.activity.HostingActivity
 import com.avocado.glamping.viewmodel.LoginState
 import com.avocado.glamping.viewmodel.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -43,7 +41,7 @@ class LoginFragment : Fragment(R.layout.login_fragment) {
                     progressBar.visibility = View.GONE
                     loginBtn.visibility = View.VISIBLE
                     Toast.makeText(requireContext(), "Login Successful!", Toast.LENGTH_SHORT).show()
-                    Intent(requireContext(), UserCampActivity::class.java).also {
+                    Intent(requireContext(), HostingActivity::class.java).also {
                         intent -> intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                         startActivity(intent)
                     }

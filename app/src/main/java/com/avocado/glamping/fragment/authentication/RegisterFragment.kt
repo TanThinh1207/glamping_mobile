@@ -1,4 +1,4 @@
-package com.avocado.glamping.fragment
+package com.avocado.glamping.fragment.authentication
 
 import android.content.Intent
 import android.os.Bundle

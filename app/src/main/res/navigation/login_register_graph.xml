@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.avocado.glamping.fragment.LoginFragment"
+        android:name="com.avocado.glamping.fragment.authentication.LoginFragment"
         android:label="LoginFragment"
         tools:layout="@layout/login_fragment">
         <action
@@ -16,7 +16,7 @@
 
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.avocado.glamping.fragment.RegisterFragment"
+        android:name="com.avocado.glamping.fragment.authentication.RegisterFragment"
         android:label="RegisterFragment"
         tools:layout="@layout/register_fragment">
         <action
