@@ -1,47 +1,84 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
+    android:layout_margin="16dp"
     app:cardCornerRadius="12dp"
-    app:cardElevation="4dp">
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="@android:color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
         android:orientation="vertical"
-        android:background="@color/g_white">
+        android:padding="16dp">
 
-        <!-- User Name -->
-        <TextView
-            android:id="@+id/userName"
-            android:layout_width="wrap_content"
+        <!-- Row: Text Info + Image -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="User Name"
-            android:textSize="18sp"
-            android:textStyle="bold"/>
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
 
-        <!-- Camp Name -->
-        <TextView
-            android:id="@+id/campName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Camp Name"
-            android:textSize="16sp"
-            android:textColor="@android:color/darker_gray"
-            android:paddingBottom="8dp"/>
+            <!-- Left Side: Booking Information -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-        <!-- Booking Date -->
-        <TextView
-            android:id="@+id/bookingDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Date: 2024-02-01"
-            android:textSize="14sp"/>
+                <!-- Campsite Name -->
+                <TextView
+                    android:id="@+id/campsiteName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sunset Campsite"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
 
-        <!-- Buttons -->
+                <!-- Booking Date -->
+                <TextView
+                    android:id="@+id/bookingDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📅 Booking Date: 2023-10-15"
+                    android:textSize="16sp"
+                    android:textColor="@color/secondaryTextColor"
+                    android:layout_marginTop="8dp" />
+
+                <!-- Number of Guests -->
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="👥 Guests: 4"
+                    android:textSize="16sp"
+                    android:textColor="@color/secondaryTextColor"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <!-- Right Side: Campsite Image -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/campsiteImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/camp_site_image"
+                android:scaleType="centerCrop"
+                android:layout_marginStart="16dp"
+                android:background="@color/g_gray500"
+                app:shapeAppearanceOverlay="@style/roundedImageStyle"
+                />
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividerColor"
+            android:layout_marginVertical="16dp" />
+
+        <!-- Buttons Row -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -49,21 +86,35 @@
             android:gravity="end"
             android:paddingTop="8dp">
 
-            <Button
-                android:id="@+id/btnAccept"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Accept"
-                android:backgroundTint="#1dab1d"/>
-
+            <!-- Deny Button -->
             <Button
                 android:id="@+id/btnDeny"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Deny"
-                android:layout_marginStart="8dp"
-                android:backgroundTint="#ab1d1d"/>
+                android:textColor="@color/red"
+                android:drawableStart="@drawable/ic_deny"
+                android:drawablePadding="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="16dp" />
+
+            <!-- Accept Button -->
+            <Button
+                android:id="@+id/btnAccept"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Accept"
+                android:textColor="@color/green"
+                android:drawableStart="@drawable/ic_accept"
+                android:drawablePadding="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="16dp" />
         </LinearLayout>
 
     </LinearLayout>
+
 </androidx.cardview.widget.CardView>

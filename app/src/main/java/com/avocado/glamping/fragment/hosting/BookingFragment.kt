@@ -12,7 +12,7 @@ import com.avocado.glamping.R
 import com.avocado.glamping.adapter.BookingAdapter
 import com.avocado.glamping.data.model.req.BookingRequest
 
-class BookingFragment : Fragment(R.layout.booking_fragment), BookingAdapter.OnBookingActionListener {
+class BookingFragment : Fragment(R.layout.fragment_booking), BookingAdapter.OnBookingActionListener {
 
     private lateinit var bookingList : MutableList<BookingRequest>
     private lateinit var adapter : BookingAdapter
@@ -22,7 +22,7 @@ class BookingFragment : Fragment(R.layout.booking_fragment), BookingAdapter.OnBo
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.booking_fragment, container, false)
+        return inflater.inflate(R.layout.fragment_booking, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -34,7 +34,8 @@ class BookingFragment : Fragment(R.layout.booking_fragment), BookingAdapter.OnBo
         bookingList = mutableListOf(
             BookingRequest("John Doe", "Sunset Camp", "2024-02-10"),
             BookingRequest("Emma Smith", "Mountain Retreat", "2024-02-15"),
-            BookingRequest("Alex Brown", "Lakeside Camp", "2024-02-20")
+            BookingRequest("Alex Brown", "Lakeside Camp", "2024-02-20"),
+            BookingRequest("Avocado Hua", "Riverside Camp", "2024-02-22")
         )
 
         adapter = BookingAdapter(bookingList, this)

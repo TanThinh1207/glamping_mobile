@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/login_fragment"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/appLogo"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="130dp"
+            android:src="@drawable/app_logo"
+            app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+            app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="80dp"
+            tools:layout_editor_absoluteY="37dp" />
+
+        <TextView
+            android:id="@+id/discoverAndHost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Discover &amp; Host"
+            app:layout_constraintStart_toStartOf="@id/guidelineInnerLeft"
+            app:layout_constraintEnd_toStartOf="@id/guidelineInnerRight"
+            app:layout_constraintTop_toBottomOf="@id/appLogo"
+            style="@style/h3"
+            android:layout_marginTop="50dp"
+            android:textFontWeight="900"
+            />
+        <TextView
+            android:id="@+id/unforgettable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unforgettable"
+            app:layout_constraintStart_toStartOf="@id/guidelineInnerLeft"
+            app:layout_constraintEnd_toStartOf="@id/guidelineInnerRight"
+            app:layout_constraintTop_toBottomOf="@id/discoverAndHost"
+            style="@style/h3"/>
+
+        <TextView
+            android:id="@+id/glampingExperiences"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Glamping Experiences"
+            app:layout_constraintStart_toStartOf="@+id/guidelineInnerLeft"
+            app:layout_constraintEnd_toStartOf="@id/guidelineInnerRight"
+            app:layout_constraintTop_toBottomOf="@id/unforgettable"
+            style="@style/h3"/>
+
+        <TextView
+            android:id="@+id/script"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Connects travelers with unique glamping stays while empowering hosts to share their luxury outdoor retreats."
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="@id/guidelineInnerLeft"
+            app:layout_constraintEnd_toStartOf="@id/guidelineInnerRight"
+            app:layout_constraintTop_toBottomOf="@id/glampingExperiences"
+            android:layout_marginTop="20dp"
+            style="@style/h2"
+            android:textFontWeight="700"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/googleBtn"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            app:layout_constraintStart_toStartOf="@id/guidelineInnerLeft"
+            app:layout_constraintEnd_toStartOf="@id/guidelineInnerRight"
+            app:layout_constraintTop_toBottomOf="@id/script"
+            android:layout_marginTop="50dp"
+            app:cornerRadius="7dp"
+            android:backgroundTint="@color/white"
+            app:strokeWidth="2dp"
+            android:text="Google Login"
+            app:icon="@drawable/icon_gg"
+            android:textColor="@color/black"
+            app:iconTint="@null"/>
+
+        <TextView
+            android:id="@+id/skipForNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skip for now"
+            app:layout_constraintStart_toStartOf="@id/guidelineInnerLeft"
+            app:layout_constraintEnd_toStartOf="@id/guidelineInnerRight"
+            app:layout_constraintTop_toBottomOf="@id/googleBtn"
+            android:backgroundTint="@color/white"
+            android:textAppearance="@string/underlined_text"
+            style="@style/h2"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
+
+
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineInnerLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.22" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineInnerRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.78" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

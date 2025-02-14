@@ -17,7 +17,7 @@ class BookingAdapter(
 
     class BookingViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val userName: TextView = itemView.findViewById(R.id.userName)
-        val campName: TextView = itemView.findViewById(R.id.campName)
+        val campName: TextView = itemView.findViewById(R.id.campsiteName)
         val bookingDate: TextView = itemView.findViewById(R.id.bookingDate)
         val btnAccept: AppCompatButton = itemView.findViewById(R.id.btnAccept)
         val btnDeny: AppCompatButton = itemView.findViewById(R.id.btnDeny)

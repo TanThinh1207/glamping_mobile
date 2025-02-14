@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/authentication_graph"
+    app:startDestination="@id/fragmentAuthentication">
+
+    <fragment
+        android:id="@+id/fragmentAuthentication"
+        android:name="com.avocado.glamping.fragment.authentication.FragmentAuthentication"
+        android:label="FragmentAuthentication"
+        tools:layout="@layout/fragment_authentication">
+        <action
+            android:id="@+id/action_fragmentAuthentication_to_fragmentRegisterInformation"
+            app:destination="@id/fragmentRegisterInformation" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentRegisterInformation"
+        android:name="com.avocado.glamping.fragment.authentication.FragmentRegisterInformation"
+        android:label="FragmentRegisterInformation"
+        tools:layout="@layout/fragment_register_information"/>
+</navigation>

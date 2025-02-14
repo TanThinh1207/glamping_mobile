@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">glamping</string>
+    <string name="underlined_text"><u>Underlined Text</u></string>
+    <string name="registerTitle">Hoàn tất đăng ký</string>
+    <string name="username">Tên người dùng</string>
+    <string name="lastName">Họ</string>
+    <string name="firstName">Tên</string>
+    <string name="username_subtext">Đảm bảo sử dụng tên thật trên giấy tờ tùy thân</string>
+    <string name="date_of_birth">Ngày sinh</string>
+    <string name="dob_subtext">Để đăng ký, bạn phải đủ 16 tuổi trở lên. Những người dùng ứng dụng khác sẽ không thấy được ngày sinh của bạn</string>
+    <string name="phone">Số điện thoại</string>
+    <string name="hint_phone">Số điện thoại</string>
+    <string name="address">Địa chỉ</string>
+    <string name="hint_country">Quốc gia</string>
+    <string name="hint_address">Địa chỉ</string>
+    <string name="email">Email</string>
+    <string name="email_subtext">Ứng dụng sẽ gửi thông báo xác nhận đặt camp tới email này</string>
+    <string name="continue_btn">Tiếp tục</string>
 </resources>

@@ -9,15 +9,21 @@
         android:id="@+id/bookingFragment"
         android:name="com.avocado.glamping.fragment.hosting.BookingFragment"
         android:label="BookingFragment"
-        tools:layout="@layout/booking_fragment"/>
+        tools:layout="@layout/fragment_booking"/>
+
     <fragment
         android:id="@+id/campSiteFragment"
         android:name="com.avocado.glamping.fragment.hosting.CampSiteFragment"
         android:label="CampSiteFragment"
-        tools:layout="@layout/camp_site_fragment"/>
+        tools:layout="@layout/fragment_camp_site"/>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.avocado.glamping.fragment.hosting.ProfileFragment"
         android:label="ProfileFragment"
-        tools:layout="@layout/profile_fragment"/>
+        tools:layout="@layout/fragment_profile"/>
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.avocado.glamping.fragment.hosting.CalendarFragment"
+        android:label="CalendarFragment"
+        tools:layout="@layout/fragment_calendar"/>
 </navigation>

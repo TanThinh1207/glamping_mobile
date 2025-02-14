@@ -2,7 +2,6 @@ package com.avocado.glamping.di
 
 import com.avocado.glamping.BuildConfig
 import com.avocado.glamping.data.model.network.LoginApiService
-import com.avocado.glamping.data.model.network.RegisterApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -57,9 +56,5 @@ object AppModule {
         return retrofit.create(LoginApiService::class.java)
     }
 
-    @Provides
-    @Singleton
-    fun provideRegisterApiService(retrofit: Retrofit): RegisterApiService{
-        return retrofit.create(RegisterApiService::class.java)
-    }
+
 }

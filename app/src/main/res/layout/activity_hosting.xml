@@ -27,7 +27,7 @@
         android:paddingBottom="10dp"
         app:itemBackground="@android:color/transparent"
         app:itemIconTint="@color/bottom_nav_icon_colors"
-        android:background="@color/g_white"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
