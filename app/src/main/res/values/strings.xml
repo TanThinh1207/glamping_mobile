@@ -16,4 +16,10 @@
     <string name="email">Email</string>
     <string name="email_subtext">Ứng dụng sẽ gửi thông báo xác nhận đặt camp tới email này</string>
     <string name="continue_btn">Tiếp tục</string>
+    <string name="verificationTitle">Xác minh tài khoản</string>
+    <string name="verificationCodeDescription">Nhập mã mà chúng tôi đã gửi đến địa chỉ email ex······@gm······.com.</string>
+    <string name="verificationCodeHint">Mã xác minh</string>
+    <string name="verificationCodeSubtext">Bạn chưa nhận được email?</string>
+    <string name="tryAgainSubtext">Thử lại</string>
+    <string name="bookingRequestTitle">Các yêu cầu đặt chỗ</string>
 </resources>

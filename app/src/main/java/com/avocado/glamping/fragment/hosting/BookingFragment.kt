@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.avocado.glamping.R
 import com.avocado.glamping.adapter.BookingAdapter
+import com.avocado.glamping.adapter.StatusAdapter
 import com.avocado.glamping.data.model.req.BookingRequest
 
 class BookingFragment : Fragment(R.layout.fragment_booking), BookingAdapter.OnBookingActionListener {
@@ -28,18 +29,26 @@ class BookingFragment : Fragment(R.layout.fragment_booking), BookingAdapter.OnBo
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val recyclerView : RecyclerView = view.findViewById(R.id.recyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+//        val recyclerView : RecyclerView = view.findViewById(R.id.recyclerView)
+//        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+//
+//        bookingList = mutableListOf(
+//            BookingRequest("John Doe", "Sunset Camp", "2024-02-10"),
+//            BookingRequest("Emma Smith", "Mountain Retreat", "2024-02-15"),
+//            BookingRequest("Alex Brown", "Lakeside Camp", "2024-02-20"),
+//            BookingRequest("Avocado Hua", "Riverside Camp", "2024-02-22")
+//        )
+//
+//        adapter = BookingAdapter(bookingList, this)
+//        recyclerView.adapter = adapter
 
-        bookingList = mutableListOf(
-            BookingRequest("John Doe", "Sunset Camp", "2024-02-10"),
-            BookingRequest("Emma Smith", "Mountain Retreat", "2024-02-15"),
-            BookingRequest("Alex Brown", "Lakeside Camp", "2024-02-20"),
-            BookingRequest("Avocado Hua", "Riverside Camp", "2024-02-22")
-        )
+        val statusList = listOf("Chờ xử lý", "Đã đặt cọc", "Đã chấp nhận", "Bị hủy", "Bị từ chối", "Đã hoàn thành")
 
-        adapter = BookingAdapter(bookingList, this)
-        recyclerView.adapter = adapter
+        val recyclerView : RecyclerView = view.findViewById(R.id.statusRecyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        recyclerView.adapter = StatusAdapter(statusList){
+            status -> Toast.makeText(requireContext(), "Clicked: $status", Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun onAccept(booking: BookingRequest) {

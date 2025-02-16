@@ -21,18 +21,22 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         app:menu="@menu/bottom_navigation"
-        app:labelVisibilityMode="unlabeled"
+        app:labelVisibilityMode="auto"
         android:elevation="0dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        app:itemBackground="@android:color/transparent"
-        app:itemIconTint="@color/bottom_nav_icon_colors"
         android:background="@color/white"
+        app:itemIconSize="24dp"
+        app:itemTextAppearanceActive="@style/BottomNavLabelText"
+        app:itemTextAppearanceInactive="@style/BottomNavLabelText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:itemTextColor="@color/bottom_nav_icon_colors"
+        app:itemIconTint="@color/bottom_nav_icon_colors"
+        app:itemRippleColor="@color/white"
+        app:itemBackground="@android:color/transparent"
         app:itemActiveIndicatorStyle="@null"
         />
+
 
 
 

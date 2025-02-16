@@ -18,5 +18,21 @@
         android:id="@+id/fragmentRegisterInformation"
         android:name="com.avocado.glamping.fragment.authentication.FragmentRegisterInformation"
         android:label="FragmentRegisterInformation"
-        tools:layout="@layout/fragment_register_information"/>
+        tools:layout="@layout/fragment_register_information">
+        <action
+            android:id="@+id/action_fragmentRegisterInformation_to_fragmentAuthentication"
+            app:destination="@id/fragmentAuthentication" />
+        <action
+            android:id="@+id/action_fragmentRegisterInformation_to_verificationFragment"
+            app:destination="@id/verificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verificationFragment"
+        android:name="com.avocado.glamping.fragment.authentication.VerificationFragment"
+        android:label="VerificationFragment"
+        tools:layout="@layout/fragment_verification">
+        <action
+            android:id="@+id/action_verificationFragment_to_fragmentRegisterInformation"
+            app:destination="@id/fragmentRegisterInformation" />
+    </fragment>
 </navigation>
