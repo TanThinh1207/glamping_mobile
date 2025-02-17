@@ -13,10 +13,8 @@ import com.avocado.glamping.adapter.BookingAdapter
 import com.avocado.glamping.adapter.StatusAdapter
 import com.avocado.glamping.data.model.req.BookingRequest
 
-class BookingFragment : Fragment(R.layout.fragment_booking), BookingAdapter.OnBookingActionListener {
+class BookingFragment : Fragment(R.layout.fragment_booking) {
 
-    private lateinit var bookingList : MutableList<BookingRequest>
-    private lateinit var adapter : BookingAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,15 +27,19 @@ class BookingFragment : Fragment(R.layout.fragment_booking), BookingAdapter.OnBo
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        val recyclerView : RecyclerView = view.findViewById(R.id.recyclerView)
-//        recyclerView.layoutManager = LinearLayoutManager(requireContext())
-//
-//        bookingList = mutableListOf(
-//            BookingRequest("John Doe", "Sunset Camp", "2024-02-10"),
-//            BookingRequest("Emma Smith", "Mountain Retreat", "2024-02-15"),
-//            BookingRequest("Alex Brown", "Lakeside Camp", "2024-02-20"),
-//            BookingRequest("Avocado Hua", "Riverside Camp", "2024-02-22")
-//        )
+        val bookingRecyclerView : RecyclerView = view.findViewById(R.id.bookingRecyclerView)
+        bookingRecyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        val bookingList = mutableListOf(
+            BookingRequest("John Doe", "Sunset Camp", "2024-02-10", "2025-02-10", 1500000.0, "Chờ xủa lý"),
+            BookingRequest("John Doe", "Sunset Camp", "2024-02-10", "2025-02-10", 1500000.0, "Chờ xủa lý"),
+            BookingRequest("John Doe", "Sunset Camp", "2024-02-10", "2025-02-10", 1500000.0, "Chờ xủa lý"),
+            BookingRequest("John Doe", "Sunset Camp", "2024-02-10", "2025-02-10", 1500000.0, "Chờ xủa lý"),
+            BookingRequest("John Doe", "Sunset Camp", "2024-02-10", "2025-02-10", 1500000.0, "Chờ xủa lý"),
+
+            )
+        bookingRecyclerView.adapter = BookingAdapter(bookingList){
+            booking -> Toast.makeText(requireContext(), "Clicked: $booking", Toast.LENGTH_SHORT).show()
+        }
 //
 //        adapter = BookingAdapter(bookingList, this)
 //        recyclerView.adapter = adapter
@@ -51,11 +53,4 @@ class BookingFragment : Fragment(R.layout.fragment_booking), BookingAdapter.OnBo
         }
     }
 
-    override fun onAccept(booking: BookingRequest) {
-        Toast.makeText(requireContext(), "Accepted: ${booking.userName}", Toast.LENGTH_SHORT).show()
-    }
-
-    override fun onDeny(booking: BookingRequest) {
-        Toast.makeText(requireContext(), "Denied: ${booking.userName}", Toast.LENGTH_SHORT).show()
-    }
 }

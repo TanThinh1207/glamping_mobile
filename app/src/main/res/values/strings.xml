@@ -22,4 +22,11 @@
     <string name="verificationCodeSubtext">Bạn chưa nhận được email?</string>
     <string name="tryAgainSubtext">Thử lại</string>
     <string name="bookingRequestTitle">Các yêu cầu đặt chỗ</string>
+    <string name="customer_name_title">Tên người đặt:</string>
+    <string name="customer_name">Tân Thịnh</string>
+    <string name="start_date_title">Ngày bắt đầu:</string>
+    <string name="end_date_title">Ngày kết thúc:</string>
+    <string name="end_date">T3 11-02-2025</string>
+    <string name="start_date">T3 11-02-2025</string>
+    <string name="status_title">Trạng thái:</string>
 </resources>

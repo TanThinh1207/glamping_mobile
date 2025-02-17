@@ -55,12 +55,19 @@
     </style>
     
     <style name="roundedImageStyle">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">12dp</item>
+        <item name="cornerSize">16dp</item>
     </style>
 
     <style name="BottomNavLabelText" parent="TextAppearance.MaterialComponents.Caption">
         <item name="android:textSize">12sp</item>  <!-- Adjust label size -->
+    </style>
+
+    <style name="bookingDetailText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
     <dimen name="h4TextSize">35sp</dimen>

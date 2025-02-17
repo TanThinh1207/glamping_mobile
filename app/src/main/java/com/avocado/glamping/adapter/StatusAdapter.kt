@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.core.content.ContextCompat
 import androidx.core.graphics.alpha
 import androidx.recyclerview.widget.RecyclerView
 import com.avocado.glamping.R
@@ -37,10 +38,9 @@ class StatusAdapter(private val statuses: List<String>, private val onClick: (St
                 holder.button.setStrokeColorResource(R.color.black)
             } else {
                 holder.button.setTypeface(null, Typeface.NORMAL)
+                holder.button.setTextColor(ContextCompat.getColor(holder.button.context,R.color.grey))
                 holder.button.strokeWidth = 4
-                holder.button.alpha = 0.5f
-                val strokeColor = holder.button.context.getColor(R.color.black).applyAlpha(0.5f)
-                holder.button.strokeColor = android.content.res.ColorStateList.valueOf(strokeColor)
+                holder.button.setStrokeColorResource(R.color.grey)
             }
             holder.button.text = status
             holder.button.setOnClickListener{
