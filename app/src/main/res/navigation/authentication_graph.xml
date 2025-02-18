@@ -19,6 +19,19 @@
         android:name="com.avocado.glamping.fragment.authentication.FragmentRegisterInformation"
         android:label="FragmentRegisterInformation"
         tools:layout="@layout/fragment_register_information">
+        <argument
+            android:name="lastname"
+            app:argType="string"/>
+        <argument
+            android:name="firstname"
+            app:argType="string"/>
+        <argument
+            android:name="email"
+            app:argType="string"/>
+        <argument
+            android:name="phone"
+            app:argType="string"
+            />
         <action
             android:id="@+id/action_fragmentRegisterInformation_to_fragmentAuthentication"
             app:destination="@id/fragmentAuthentication" />

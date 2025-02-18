@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "216718482095",
+    "project_id": "glamping-450314",
+    "storage_bucket": "glamping-450314.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216718482095:android:09c23853f730faf2fed25a",
+        "android_client_info": {
+          "package_name": "com.avocado.glamping"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216718482095-orb3o8bql6df5sbkbi5pqk7fp7a11cg6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.avocado.glamping",
+            "certificate_hash": "72372a661b94e8cf680bf02c6b5f95b238773f4d"
+          }
+        },
+        {
+          "client_id": "216718482095-2g9o5kfu9hg5pshvuju3hnlulk49bk50.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhqw1U26UQqOD35w4Eabo6P-kyZ63xWkY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "216718482095-1iihfjd0bhi9cu00a7c19gt6v8faok3j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

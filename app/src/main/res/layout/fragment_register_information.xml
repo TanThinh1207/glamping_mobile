@@ -91,11 +91,18 @@
                 android:hint="@string/date_of_birth"
                 style="@style/editTextLayout"
                 android:labelFor="@id/editTextDate"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/calendar_edit_text_icon"
+                app:endIconTint="@color/black"
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextDate"
-                    style="@style/editText"/>
+                    style="@style/editText"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:inputType="none"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView

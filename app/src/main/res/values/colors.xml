@@ -23,4 +23,12 @@
     <color name="red">#F44336</color>
     <color name="black">#000000</color>
     <color name="grey">#DAD9D9</color>
+
+    <color name="md_theme_light_primary">#000000</color>
+    <color name="md_theme_light_onPrimary">#FFFFFF</color>
+    <color name="md_theme_light_primaryContainer">#222222</color>
+
+    <color name="md_theme_dark_primary">#FFFFFF</color>
+    <color name="md_theme_dark_onPrimary">#000000</color>
+    <color name="md_theme_dark_primaryContainer">#444444</color>
 </resources>

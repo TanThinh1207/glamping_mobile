@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.avocado.glamping" />
+                  <option name="mobileSdkAppId" value="1:216718482095:android:09c23853f730faf2fed25a" />
+                  <option name="projectId" value="glamping-450314" />
+                  <option name="projectNumber" value="216718482095" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

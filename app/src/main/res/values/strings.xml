@@ -29,4 +29,20 @@
     <string name="end_date">T3 11-02-2025</string>
     <string name="start_date">T3 11-02-2025</string>
     <string name="status_title">Trạng thái:</string>
+    <string name="customer_detail">Thông tin người đặt chỗ</string>
+    <string name="full_name_title">Tên đầy đủ:</string>
+    <string name="phone_title">Số điện thoại</string>
+    <string name="customer_detail_phone">0903756192</string>
+    <string name="customer_detail_email_title">Email</string>
+    <string name="customer_detail_email">example@gmail.com</string>
+    <string name="booking_detail_title">Thông tin đặt chỗ</string>
+    <string name="booking_code_title">Mã đặt chỗ</string>
+    <string name="booking_code">XXXXXXX01</string>
+    <string name="booking_detail_create_date_title">Ngày thực hiện đặt chỗ</string>
+    <string name="booking_detail_create_date">2025-02-12 12:10:00</string>
+    <string name="booking_detail_start_date_title">Ngày đến</string>
+    <string name="booking_detail_start_date">2025-02-13</string>
+    <string name="booking_detail_end_date">2025-02-13</string>
+    <string name="booking_detail_deposit_date_title">Ngày đặt cọc</string>
+    <string name="booking_detail_deposit_date">2025-02-12 12:10:00</string>
 </resources>

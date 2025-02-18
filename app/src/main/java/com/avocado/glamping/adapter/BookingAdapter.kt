@@ -13,7 +13,7 @@ import okhttp3.internal.userAgent
 
 class BookingAdapter(
     private val bookingList : MutableList<BookingRequest>,
-    private val onClick : (String) -> Unit
+    private val onClick : (BookingRequest) -> Unit
 ) : RecyclerView.Adapter<BookingAdapter.BookingViewHolder>() {
 
 
@@ -46,7 +46,7 @@ class BookingAdapter(
         holder.total.text = booking.total.toString()
 
         holder.bookingCard.setOnClickListener{
-            onClick(booking.username)
+            onClick(booking)
         }
     }
 

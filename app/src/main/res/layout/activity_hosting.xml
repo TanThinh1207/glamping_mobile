@@ -23,7 +23,7 @@
         app:menu="@menu/bottom_navigation"
         app:labelVisibilityMode="auto"
         android:elevation="0dp"
-        android:background="@color/white"
+        android:backgroundTint="@color/white"
         app:itemIconSize="24dp"
         app:itemTextAppearanceActive="@style/BottomNavLabelText"
         app:itemTextAppearanceInactive="@style/BottomNavLabelText"
