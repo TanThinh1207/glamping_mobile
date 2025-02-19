@@ -51,14 +51,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Mã đặt chỗ:"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
 
                     <TextView
                         android:id="@+id/bookingId"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1"
-                        android:layout_marginStart="8dp"/>
+                        android:layout_marginStart="8dp"
+                        android:textColor="@color/black"/>
                 </LinearLayout>
 
                 <!-- Extra Empty View to Balance Centering -->
@@ -108,7 +110,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="5"
                             android:text="@string/full_name_title"
-                            android:textAlignment="viewStart" />
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -116,7 +119,8 @@
                             android:layout_weight="5"
                             android:text="Tân Thịnh"
                             android:textAlignment="viewEnd"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:textColor="@color/black"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -130,7 +134,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="5"
                             android:text="@string/phone_title"
-                            android:textAlignment="viewStart" />
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -138,7 +143,8 @@
                             android:layout_weight="5"
                             android:text="@string/customer_detail_phone"
                             android:textAlignment="viewEnd"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:textColor="@color/black"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -152,7 +158,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="5"
                             android:text="@string/customer_detail_email_title"
-                            android:textAlignment="viewStart" />
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -160,7 +167,8 @@
                             android:layout_weight="5"
                             android:text="@string/customer_detail_email"
                             android:textAlignment="viewEnd"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:textColor="@color/black"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -187,14 +195,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="2"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="5dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="5"
                             android:text="@string/booking_code_title"
-                            android:textAlignment="viewStart" />
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:id="@id/bookingId"
@@ -203,21 +213,24 @@
                             android:layout_weight="5"
                             android:text="@string/booking_code"
                             android:textAlignment="viewEnd"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:textColor="@color/black"/>
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="2"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="5dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="5"
                             android:text="@string/booking_detail_create_date_title"
-                            android:textAlignment="viewStart" />
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -225,20 +238,23 @@
                             android:layout_weight="5"
                             android:text="@string/booking_detail_create_date"
                             android:textAlignment="viewEnd"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:textColor="@color/black"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="2"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="5dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="5"
                             android:text="@string/booking_detail_deposit_date_title"
-                            android:textAlignment="viewStart" />
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -246,20 +262,23 @@
                             android:layout_weight="5"
                             android:text="@string/booking_detail_deposit_date"
                             android:textAlignment="viewEnd"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:textColor="@color/black"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="2"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="5dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="5"
                             android:text="@string/booking_detail_start_date_title"
-                            android:textAlignment="viewStart" />
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -267,20 +286,23 @@
                             android:layout_weight="5"
                             android:text="@string/booking_detail_start_date"
                             android:textAlignment="viewEnd"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:textColor="@color/black"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="2"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="5dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="5"
                             android:text="Ngày rời khỏi"
-                            android:textAlignment="viewStart" />
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -288,7 +310,8 @@
                             android:layout_weight="5"
                             android:text="@string/booking_detail_end_date"
                             android:textAlignment="viewEnd"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:textColor="@color/black"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -324,7 +347,9 @@
                             android:layout_weight="2"
                             android:text="Luxury Tent"
                             android:gravity="center"
-                            android:textAlignment="center"/>
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="5dp"/>
 
                         <TextView
                             android:layout_width="0dp"
@@ -332,7 +357,8 @@
                             android:layout_weight="2"
                             android:text="1"
                             android:gravity="center"
-                            android:textAlignment="center"/>
+                            android:textAlignment="center"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="0dp"
@@ -340,7 +366,8 @@
                             android:layout_weight="2"
                             android:text="500.000đ"
                             android:gravity="center"
-                            android:textAlignment="center"/>
+                            android:textAlignment="center"
+                            android:textColor="@color/black"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -364,7 +391,9 @@
                             android:layout_weight="2"
                             android:text="Luxury Tent"
                             android:gravity="center"
-                            android:textAlignment="center"/>
+                            android:textAlignment="center"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="0dp"
@@ -372,7 +401,8 @@
                             android:layout_weight="2"
                             android:text="1"
                             android:gravity="center"
-                            android:textAlignment="center"/>
+                            android:textAlignment="center"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="0dp"
@@ -380,7 +410,8 @@
                             android:layout_weight="2"
                             android:text="1.000.000đ"
                             android:gravity="center"
-                            android:textAlignment="center"/>
+                            android:textAlignment="center"
+                            android:textColor="@color/black"/>
                     </LinearLayout>
 
 

@@ -47,11 +47,13 @@
                     android:layout_height="wrap_content"
                     android:text="@string/customer_name_title"
                     android:alpha="0.7"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="12dp"/>
                 <TextView
                     android:id="@+id/customer_name"
                     android:text="@string/customer_name"
-                    style="@style/bookingDetailText"/>
+                    style="@style/bookingDetailText"
+                    android:textSize="12dp"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -62,12 +64,14 @@
                     android:layout_height="wrap_content"
                     android:text="@string/start_date_title"
                     android:alpha="0.7"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="12dp"/>
 
                 <TextView
                     android:id="@+id/start_date"
                     android:text="@string/start_date"
                     style="@style/bookingDetailText"
+                    android:textSize="12dp"
                     />
             </LinearLayout>
             <LinearLayout
@@ -80,12 +84,14 @@
                     android:layout_height="wrap_content"
                     android:text="@string/end_date_title"
                     android:alpha="0.7"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="12dp"/>
 
                 <TextView
                     android:id="@+id/end_date"
                     android:text="@string/end_date"
-                    style="@style/bookingDetailText"/>
+                    style="@style/bookingDetailText"
+                    android:textSize="12dp"/>
 
             </LinearLayout>
             <LinearLayout
@@ -98,12 +104,14 @@
                     android:layout_height="wrap_content"
                     android:text="@string/status_title"
                     android:alpha="0.7"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="12dp"/>
 
                 <TextView
                     android:id="@+id/status"
                     android:text="Chờ xử lý"
                     style="@style/bookingDetailText"
+                    android:textSize="12dp"
                     />
 
             </LinearLayout>
@@ -117,7 +125,8 @@
                     android:layout_height="wrap_content"
                     android:text="1.500.000VNĐ"
                     style="@style/h2"
-                    android:textAlignment="center"/>
+                    android:textAlignment="center"
+                    android:textSize="17dp"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
