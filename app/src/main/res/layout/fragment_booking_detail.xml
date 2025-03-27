@@ -55,7 +55,7 @@
                         android:textColor="@color/black"/>
 
                     <TextView
-                        android:id="@+id/bookingId"
+                        android:id="@+id/bookingIdTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1"
@@ -114,6 +114,7 @@
                             android:textColor="@color/black"/>
 
                         <TextView
+                            android:id="@+id/customer_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="5"
@@ -138,6 +139,7 @@
                             android:textColor="@color/black"/>
 
                         <TextView
+                            android:id="@+id/phone"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="5"
@@ -162,6 +164,7 @@
                             android:textColor="@color/black"/>
 
                         <TextView
+                            android:id="@+id/email"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="5"
@@ -207,7 +210,7 @@
                             android:textColor="@color/black"/>
 
                         <TextView
-                            android:id="@id/bookingId"
+                            android:id="@+id/bookingId"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="5"
@@ -233,6 +236,7 @@
                             android:textColor="@color/black"/>
 
                         <TextView
+                            android:id="@+id/created_time"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="5"
@@ -257,6 +261,7 @@
                             android:textColor="@color/black"/>
 
                         <TextView
+                            android:id="@+id/deposit_date"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="5"
@@ -281,6 +286,7 @@
                             android:textColor="@color/black"/>
 
                         <TextView
+                            android:id="@+id/check_in_date"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="5"
@@ -300,11 +306,12 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="5"
-                            android:text="Ngày rời khỏi"
+                            android:text="Check-out-Date"
                             android:textAlignment="viewStart"
                             android:textColor="@color/black"/>
 
                         <TextView
+                            android:id="@+id/check_out_date"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="5"
@@ -325,95 +332,26 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
-                    <LinearLayout
+                    <TextView
+                        style="@style/h2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/camp_type_title"
+                        android:textStyle="bold" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewCampTypes"
                         android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
-                        android:layout_marginBottom="10dp">
-
-                        <com.google.android.material.imageview.ShapeableImageView
-                            android:id="@+id/imageCampType"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:src="@drawable/image_placeholder"
-                            app:shapeAppearanceOverlay="@style/roundedImageStyle"
-                            android:scaleType="centerCrop" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2"
-                            android:text="Luxury Tent"
-                            android:gravity="center"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"
-                            android:layout_marginLeft="5dp"/>
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2"
-                            android:text="1"
-                            android:gravity="center"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"/>
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2"
-                            android:text="500.000đ"
-                            android:gravity="center"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"/>
-                    </LinearLayout>
-                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:padding="8dp"
+                        android:scrollbars="vertical"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewBookingDetails"
                         android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
-                        android:layout_marginBottom="10dp">
-
-                        <com.google.android.material.imageview.ShapeableImageView
-                            android:id="@+id/imageCampType2"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2.5"
-                            android:src="@drawable/image_placeholder"
-                            app:shapeAppearanceOverlay="@style/roundedImageStyle"
-                            android:scaleType="centerCrop" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2"
-                            android:text="Luxury Tent"
-                            android:gravity="center"
-                            android:textAlignment="center"
-                            android:layout_marginLeft="5dp"
-                            android:textColor="@color/black"/>
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2"
-                            android:text="1"
-                            android:gravity="center"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"/>
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2"
-                            android:text="1.000.000đ"
-                            android:gravity="center"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"/>
-                    </LinearLayout>
-
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:padding="8dp"
+                        android:scrollbars="vertical"/>
 
                 </LinearLayout>
 
@@ -423,46 +361,198 @@
                     android:background="@android:color/darker_gray"
                     android:layout_marginVertical="8dp"/>
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="1.500.000đ"
-                    android:textAlignment="viewEnd"
-                    style="@style/h3"/>
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        style="@style/h2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/service_title"
+                        android:textStyle="bold" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewService"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:scrollbars="vertical"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginVertical="8dp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total:"/>
+                    <TextView
+                        android:id="@+id/total_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1.500.000đ"
+                        android:textAlignment="viewEnd"
+                        style="@style/h2"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Deposit:"/>
+                    <TextView
+                        android:id="@+id/deposit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1.500.000đ"
+                        android:textAlignment="viewEnd"
+                        style="@style/h2"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/remaining_amount_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Remaining Amount:"/>
+                    <TextView
+                        android:id="@+id/remaining_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1.500.000đ"
+                        android:textAlignment="viewEnd"
+                        style="@style/h2"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/total_add_on_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Add On:"/>
+                    <TextView
+                        android:id="@+id/total_add_on"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1.500.000đ"
+                        android:textAlignment="viewEnd"
+                        style="@style/h2"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/total_with_add_ons_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Final Payment:"/>
+                    <TextView
+                        android:id="@+id/total_with_add_ons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1.500.000đ"
+                        android:textAlignment="viewEnd"
+                        style="@style/h2"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:text="Pending"
+                    android:textAlignment="viewEnd"
+                    style="@style/h3"
+                    android:alpha="0.7"/>
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:indeterminateTint="@color/black"/>
+                <LinearLayout
+                    android:id="@+id/btnLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/acceptBtn"
                         android:layout_marginTop="10dp"
-                        android:layout_height="70dp"
+                        android:layout_height="60dp"
                         android:layout_width="0dp"
                         android:layout_weight="5"
-                        android:text="Đồng ý"
+                        android:text="Accept"
                         android:textAllCaps="false"
                         android:textStyle="bold"
                         android:textColor="@color/white"
                         android:backgroundTint="@color/black"
+                        app:rippleColor="@color/black"
                         android:layout_marginBottom="20dp"
                         app:cornerRadius="8dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:stateListAnimator="@animator/button_scale"
                         />
+
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/denyBtn"
                         android:layout_marginTop="10dp"
-                        android:layout_height="70dp"
+                        android:layout_height="60dp"
                         android:layout_width="0dp"
                         android:layout_weight="5"
-                        android:text="Từ chối"
+                        android:text="Deny"
                         android:textAllCaps="false"
                         android:textStyle="bold"
                         android:textColor="@color/white"
-                        android:backgroundTint="@color/grey"
+                        android:backgroundTint="@color/red"
                         android:layout_marginBottom="20dp"
                         app:cornerRadius="8dp"
+                        android:stateListAnimator="@animator/button_scale"
                         />
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_check_in"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="70dp"
+                        android:layout_width="match_parent"
+                        android:text="Check In"
+                        android:textAllCaps="false"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/black"
+                        android:stateListAnimator="@animator/button_scale"
+                        android:layout_marginBottom="20dp"
+                        app:cornerRadius="8dp"
+                        android:visibility="gone"
+                        />
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_check_out"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="70dp"
+                        android:layout_width="match_parent"
+                        android:text="Check Out"
+                        android:textAllCaps="false"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/black"
+                        android:stateListAnimator="@animator/button_scale"
+                        android:layout_marginBottom="20dp"
+                        app:cornerRadius="8dp"
+                        android:visibility="gone"
+                        />
+
                 </LinearLayout>
 
             </LinearLayout>

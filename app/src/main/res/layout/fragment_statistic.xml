@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/progress_bar_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/layout_statistic"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+
+                <!-- Back Arrow -->
+                <ImageView
+                    android:id="@+id/backArrow"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/back_arrow"
+                    android:background="@drawable/ripple_effect"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:contentDescription="Go back"/>
+
+                <!-- Centered Text Layout -->
+                <LinearLayout
+                    android:id="@+id/dropdown_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <TextView
+                        android:id="@+id/title_camp_site_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tropical Eglapming"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:drawableEnd="@drawable/arrow_down"
+                        android:drawablePadding="10dp"/>
+
+                </LinearLayout>
+
+                <!-- Extra Empty View to Balance Centering -->
+                <View
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_no_camp_site"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You have no campsite to display"
+                android:layout_marginTop="100dp"
+                android:layout_gravity="center"
+                style="@style/h2"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:id="@+id/layout_display_infor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="Start Date"
+                        style="@style/editTextLayout"
+                        android:labelFor="@id/ed_start_date"
+                        app:endIconMode="custom"
+                        app:endIconDrawable="@drawable/calendar_edit_text_icon"
+                        app:endIconTint="@color/black"
+                        app:hintTextColor="@color/black"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        android:layout_marginEnd="10dp"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ed_start_date"
+                            style="@style/editText"
+                            android:focusable="false"
+                            android:clickable="true"
+                            android:inputType="none"
+                            android:textSize="@dimen/h0_5TextSize"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:hint="End Date"
+                        style="@style/editTextLayout"
+                        android:labelFor="@id/ed_end_date"
+                        app:endIconMode="custom"
+                        app:endIconDrawable="@drawable/calendar_edit_text_icon"
+                        app:endIconTint="@color/black"
+                        app:hintTextColor="@color/black"
+                        android:layout_width="0dp"
+                        android:layout_weight="5"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/ed_end_date"
+                            style="@style/editText"
+                            android:focusable="false"
+                            android:clickable="true"
+                            android:inputType="none"
+                            android:textSize="@dimen/h0_5TextSize"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_search"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="50dp"
+                        android:layout_width="match_parent"
+                        android:text="Search"
+                        android:textAllCaps="false"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/black"
+                        android:stateListAnimator="@animator/button_scale"
+                        app:rippleColor="@color/black"
+
+                        app:cornerRadius="8dp"
+                        />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:indeterminateTint="@color/black"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_revenue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border_linear_layout"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:paddingHorizontal="15dp"
+                        android:paddingVertical="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Revenue"
+                            style="@style/h2"
+                            android:alpha="0.5"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/tv_total_revenue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1.000.000đ"
+                                style="@style/h4"
+                                android:layout_marginEnd="10dp"/>
+                            <TextView
+                                android:id="@+id/tv_revenue_percent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="20.00%"
+                                style="@style/h1"
+                                android:textColor="@color/green"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border_linear_layout"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="15dp"
+                        android:paddingVertical="10dp"
+                        android:layout_marginTop="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Revenue from Stripe"
+                            style="@style/h2"
+                            android:alpha="0.5"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/tv_stripe_revenue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1.000.000đ"
+                                style="@style/h4"
+                                android:layout_marginEnd="10dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/chart_revenue"
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

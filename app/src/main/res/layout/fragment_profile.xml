@@ -1,6 +1,225 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
 
+
+    <TextView
+        android:id="@+id/bookingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        style="@style/h4"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@id/guidelineTop"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/statusList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/guidelineBottom"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@id/bookingTitle"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_warning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/warning"
+                        android:contentDescription="Warning Icon" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingStart="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_warning_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Warning"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/red"/>
+
+                        <TextView
+                            android:id="@+id/tv_warning_message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Your account is restricted from making payments. Please visit the website to unlock it."
+                            android:textSize="14sp"
+                            android:textColor="@color/g_light_red"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                >
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/profile_icon_v3"
+                    />
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    style="@style/h3"
+                    android:alpha="0.7"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:id="@+id/img_edit_profile"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/arrow_right"
+                    android:background="@drawable/ripple_effect"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginVertical="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/h3"
+                android:text="Hosting"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/insight"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Insights"
+                    android:layout_marginLeft="10dp"
+                    style="@style/h2"
+                    android:layout_weight="1"/>
+                <ImageView
+                    android:id="@+id/img_insight"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/arrow_right"
+                    android:background="@drawable/ripple_effect"
+                    android:clickable="true"
+                    android:focusable="true"/>
+            </LinearLayout>
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:layout_marginTop="15dp">-->
+<!--                <ImageView-->
+<!--                    android:layout_width="35dp"-->
+<!--                    android:layout_height="35dp"-->
+<!--                    android:src="@drawable/earning_v2"/>-->
+<!--                <TextView-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Earnings"-->
+<!--                    android:layout_marginLeft="10dp"-->
+<!--                    style="@style/h2"-->
+<!--                    android:layout_weight="1"/>-->
+<!--                <ImageView-->
+<!--                    android:layout_width="25dp"-->
+<!--                    android:layout_height="25dp"-->
+<!--                    android:src="@drawable/arrow_right"-->
+<!--                    android:background="@drawable/ripple_effect"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusable="true"/>-->
+<!--            </LinearLayout>-->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/logOutBtn"
+                android:layout_marginTop="10dp"
+                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:text="Log out"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/black"
+                android:layout_marginBottom="20dp"
+                android:stateListAnimator="@animator/button_scale"
+                app:cornerRadius="8dp"
+                app:rippleColor="@color/black"
+                />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.92" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
 </androidx.constraintlayout.widget.ConstraintLayout>

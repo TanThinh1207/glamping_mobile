@@ -6,10 +6,11 @@
         </shape>
     </item>
 
-    <item android:bottom="4dp" android:right="4dp" android:left="1.5dp" android:top="1.5dp">
+    <item>
         <shape android:shape="rectangle">
             <corners android:radius="10dp"/>
             <solid android:color="@color/white"/>
+            <stroke android:width="2dp" android:color="@color/drak_gray"/>
         </shape>
     </item>
 </layer-list>

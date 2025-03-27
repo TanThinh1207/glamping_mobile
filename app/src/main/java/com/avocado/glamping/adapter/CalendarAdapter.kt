@@ -21,7 +21,7 @@ class CalendarAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CalendarViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.row_card_calendar, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.card_chat_user, parent, false)
         return CalendarViewHolder(view)
     }
 

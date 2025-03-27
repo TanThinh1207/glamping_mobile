@@ -17,19 +17,25 @@
 
     <fragment
         android:id="@+id/campSiteFragment"
-        android:name="com.avocado.glamping.fragment.hosting.CampSiteFragment"
+        android:name="com.avocado.glamping.fragment.hosting.campsite.CampSiteFragment"
         android:label="CampSiteFragment"
-        tools:layout="@layout/fragment_camp_site"/>
+        tools:layout="@layout/fragment_camp_site">
+        <action
+            android:id="@+id/action_campSiteFragment_to_campsiteDetailFragment"
+            app:destination="@id/campsiteDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.avocado.glamping.fragment.hosting.ProfileFragment"
+        android:name="com.avocado.glamping.fragment.hosting.profile.ProfileFragment"
         android:label="ProfileFragment"
-        tools:layout="@layout/fragment_profile"/>
-    <fragment
-        android:id="@+id/calendarFragment"
-        android:name="com.avocado.glamping.fragment.hosting.CalendarFragment"
-        android:label="CalendarFragment"
-        tools:layout="@layout/fragment_calendar"/>
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_profileEditFragment2"
+            app:destination="@id/profileEditFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_statisticFragment"
+            app:destination="@id/statisticFragment" />
+    </fragment>
     <fragment
         android:id="@+id/bookingDetailFragment"
         android:name="com.avocado.glamping.fragment.hosting.booking.BookingDetailFragment"
@@ -39,7 +45,82 @@
             android:id="@+id/action_bookingDetailFragment_to_bookingFragment"
             app:destination="@id/bookingFragment" />
         <argument
-            android:name="bookingId"
-            app:argType="string"/>
+            android:name="booking"
+            app:argType="com.avocado.glamping.data.model.resp.BookingResponse" />
+    </fragment>
+    <fragment
+        android:id="@+id/campsiteDetailFragment"
+        android:name="com.avocado.glamping.fragment.hosting.campsite.CampsiteDetailFragment"
+        android:label="CampsiteDetailFragment"
+        tools:layout="@layout/fragment_camp_site_detail">
+        <action
+            android:id="@+id/action_campsiteDetailFragment_to_campSiteFragment"
+            app:destination="@id/campSiteFragment" />
+        <argument
+            android:name="campSite"
+            app:argType="com.avocado.glamping.data.model.resp.CampsiteResponse"/>
+        <action
+            android:id="@+id/action_campsiteDetailFragment_to_campTypeFragment"
+            app:destination="@id/campTypeFragment" />
+        <action
+            android:id="@+id/action_campsiteDetailFragment_to_serviceFragment"
+            app:destination="@id/serviceFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/campTypeFragment"
+        android:name="com.avocado.glamping.fragment.hosting.campsite.CampTypeFragment"
+        android:label="CampTypeFragment"
+        tools:layout="@layout/fragment_edit_camp_type" >
+        <action
+            android:id="@+id/action_campTypeFragment_to_campsiteDetailFragment"
+            app:destination="@id/campsiteDetailFragment" />
+        <argument
+            android:name="campType"
+            app:argType="com.avocado.glamping.data.model.resp.CampTypeResponse"/>
+    </fragment>
+    <fragment
+        android:id="@+id/profileEditFragment"
+        android:name="com.avocado.glamping.fragment.hosting.profile.ProfileEditFragment"
+        android:label="ProfileEditFragment"
+        tools:layout="@layout/fragment_profile_edit">
+        <argument
+            android:name="user"
+            app:argType="com.avocado.glamping.data.model.resp.UserResponse"/>
+        <action
+            android:id="@+id/action_profileEditFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/statisticFragment"
+        android:name="com.avocado.glamping.fragment.hosting.profile.StatisticFragment"
+        android:label="StatisticFragment"
+        tools:layout="@layout/fragment_statistic"/>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.avocado.glamping.fragment.hosting.chat.ChatFragment"
+        android:label="ChatFragment"
+        tools:layout="@layout/fragment_chat">
+        <argument
+            android:name="sender"
+            app:argType="com.avocado.glamping.data.model.resp.ChatUserResponse"/>
+    </fragment>
+    <fragment
+        android:id="@+id/chatListFragment"
+        android:name="com.avocado.glamping.fragment.hosting.chat.ChatListFragment"
+        android:label="ChatListFragment"
+        tools:layout="@layout/fragment_chat_list">
+        <action
+            android:id="@+id/action_chatListFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/serviceFragment"
+        android:name="com.avocado.glamping.fragment.hosting.campsite.ServiceFragment"
+        android:label="ServiceFragment"
+        tools:layout="@layout/fragment_edit_service">
+        <argument
+            android:name="service"
+            app:argType="com.avocado.glamping.data.model.resp.SelectionResponse"/>
     </fragment>
 </navigation>

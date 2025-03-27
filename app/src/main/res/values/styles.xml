@@ -12,6 +12,17 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">@dimen/h2TextSize</item>
     </style>
+    <style name="h1">
+        <item name="android:fontFamily">@font/poppins_thin</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/h1TextSize</item>
+    </style>
+
+    <style name="h0_5">
+        <item name="android:fontFamily">@font/poppins_thin</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/h0_5TextSize</item>
+    </style>
 
     <style name="h3">
         <item name="android:fontFamily">@font/poppins_thin</item>
@@ -52,7 +63,9 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:textColor">@color/black</item>
+        <item name="android:textCursorDrawable">@drawable/custom_cursor</item>
     </style>
+
     
     <style name="roundedImageStyle">
         <item name="cornerSize">16dp</item>
@@ -66,12 +79,28 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:layout_marginLeft">10dp</item>
         <item name="android:textColor">@color/black</item>
     </style>
 
+
+
+    <style name="MaterialCalendarTheme" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="backgroundTint">@color/drak_gray</item>
+        <item name="backgroundColor">@color/drak_gray</item>
+    </style>
+
+
+
+
+
+
+
+
+
     <dimen name="h4TextSize">35sp</dimen>
     <dimen name="h2TextSize">17sp</dimen>
+    <dimen name="h1TextSize">14sp</dimen>
+    <dimen name="h0_5TextSize">12sp</dimen>
     <dimen name="h3TextSize">23sp</dimen>
 
 

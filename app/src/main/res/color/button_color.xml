@@ -1,0 +1,4 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="#000000" android:state_pressed="true"/> <!-- Black when clicked -->
+    <item android:color="#333333"/> <!-- Lighter black (default) -->
+</selector>

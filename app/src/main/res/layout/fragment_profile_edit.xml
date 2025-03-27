@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/backArrow"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/back_arrow"
+                android:background="@drawable/ripple_effect"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:contentDescription="Go back"/>  <!-- Ensures proper spacing inside the circle -->
+
+
+            <TextView
+                android:id="@+id/editTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Profile"
+                style="@style/h3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/username"
+                style="@style/h2"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="@string/lastName"
+                style="@style/editTextLayout"
+                android:labelFor="@id/editTextLastName"
+                app:hintTextColor="@color/black"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_last_name"
+                    style="@style/editText"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="5dp"
+                android:hint="@string/firstName"
+                style="@style/editTextLayout"
+                android:labelFor="@id/editTextFirstName"
+                app:hintTextColor="@color/black"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_first_name"
+                    style="@style/editText"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/username_subtext"
+                android:alpha="0.5"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date_of_birth"
+                android:layout_marginTop="10dp"
+                style="@style/h2"
+                android:textStyle="bold"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="@string/date_of_birth"
+                style="@style/editTextLayout"
+                android:labelFor="@id/editTextDate"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/calendar_edit_text_icon"
+                app:endIconTint="@color/black"
+                app:hintTextColor="@color/black"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_dob"
+                    style="@style/editText"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:inputType="none"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone"
+                android:layout_marginTop="10dp"
+                style="@style/h2"
+                android:textStyle="bold"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="@string/hint_phone"
+                style="@style/editTextLayout"
+                android:labelFor="@id/editTextPhone"
+                app:hintTextColor="@color/black"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_phone"
+                    style="@style/editText"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/address"
+                android:layout_marginTop="10dp"
+                style="@style/h2"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:hint="@string/hint_address"
+                    style="@style/editTextLayout"
+
+                    android:labelFor="@id/editTextAddress"
+                    app:hintTextColor="@color/black"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_address"
+                        style="@style/editText" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:layout_marginTop="10dp"
+                style="@style/h2"
+                android:textStyle="bold"/>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/editTextLayout"
+                app:boxBackgroundColor="@color/grey"
+                android:labelFor="@id/editTextEmail"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:focusable="false"
+                    android:id="@+id/ed_email"
+                    android:text="example@gmail.com"
+                    style="@style/editText" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email_subtext"
+                android:alpha="0.5"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_save"
+                android:layout_marginTop="10dp"
+                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                android:text="@string/continue_btn"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/black"
+                android:stateListAnimator="@animator/button_scale"
+                android:layout_marginBottom="20dp"
+                app:cornerRadius="8dp"
+                />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:indeterminateTint="@color/black"
+                />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,10 +2,18 @@
     <style name="Base.Theme.Glamping" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorSurface">@color/white</item>
         <item name="android:windowBackground">@color/white</item>
-        <item name="colorPrimary">@color/black</item>
-        <item name="materialThemeOverlay">@style/ThemeOverlay.Material3</item>  <!-- Force Material 3 -->
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="colorPrimary">#000000</item> <!-- Black primary color -->
+        <item name="colorOnPrimary">#FFFFFF</item> <!-- Text color on primary -->
+        <item name="fontFamily">@font/poppins_thin</item>
+        <item name="android:fitsSystemWindows">true</item>
     </style>
 
-    <style name="Theme.Glamping" parent="Base.Theme.Glamping" />
+    <style name="Theme.Glamping" parent="Base.Theme.Glamping">
+        <item name="android:textCursorDrawable">@null</item>
+    </style>
 </resources>
 

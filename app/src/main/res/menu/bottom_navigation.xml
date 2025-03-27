@@ -7,9 +7,9 @@
         android:id="@+id/bookingFragment"/>
 
     <item
-        android:title="Calendar"
-        android:icon="@drawable/calendar_icon"
-        android:id="@+id/calendarFragment"/>
+        android:title="Message"
+        android:icon="@drawable/message"
+        android:id="@+id/chatListFragment"/>
 
     <item
         android:title="CampSite"

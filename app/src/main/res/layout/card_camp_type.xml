@@ -1,0 +1,142 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/campTypeCard"
+    android:layout_width="match_parent"
+    android:layout_height="125dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:backgroundTint="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:padding="15dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_camp_site_detail_camp_type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/image_placeholder"
+                app:shapeAppearanceOverlay="@style/roundedImageStyle"
+                android:scaleType="centerCrop"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:alpha="0.7"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"/>
+                <TextView
+                    android:id="@+id/camp_type_name"
+                    android:text="Luxurious Tent"
+                    style="@style/bookingDetailText"
+                    android:textSize="12dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2">
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="Daily"
+                    android:alpha="0.7"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/daily_price"
+                    android:text="500.000đ"
+                    style="@style/bookingDetailText"
+                    android:textSize="12dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="Weekend"
+                    android:alpha="0.7"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/weekend_price"
+                    android:text="750.000đ"
+                    style="@style/bookingDetailText"
+                    android:textSize="12dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="Capacity"
+                    android:alpha="0.7"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/capacity"
+                    android:text="4 people"
+                    style="@style/bookingDetailText"
+                    android:textSize="12dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="Camps"
+                    android:alpha="0.7"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/number_camp"
+                    android:text="4 camps"
+                    style="@style/bookingDetailText"
+                    android:textSize="12dp"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

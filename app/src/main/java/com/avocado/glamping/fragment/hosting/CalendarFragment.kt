@@ -28,11 +28,11 @@ class CalendarFragment : Fragment(R.layout.fragment_calendar) {
         val calendarRecyclerView : RecyclerView = view.findViewById(R.id.calendarRecyclerView)
         calendarRecyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 
-        val campsites = mutableListOf(
-            CampsiteResponse("Tropical Eglamping", "Sẵn sáng phục vụ"),
-            CampsiteResponse("Sunshine Glamping", "Tạm ngưng phục vụ")
-        )
-        calendarRecyclerView.adapter = CalendarAdapter(campsites) { campsite ->
+//        val campsites = mutableListOf(
+//            CampsiteResponse("Tropical Eglamping", "Sẵn sáng phục vụ"),
+//            CampsiteResponse("Sunshine Glamping", "Tạm ngưng phục vụ")
+//        )
+        calendarRecyclerView.adapter = CalendarAdapter(emptyList()) { campsite ->
             Toast.makeText(requireContext(),campsite.name, Toast.LENGTH_SHORT).show()
         }
     }

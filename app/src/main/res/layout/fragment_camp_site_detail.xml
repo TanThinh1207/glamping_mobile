@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Back Arrow -->
+                <ImageView
+                    android:id="@+id/backArrow"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/back_arrow"
+                    android:background="@drawable/ripple_effect"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:contentDescription="Go back"/>
+
+                <!-- Centered Text Layout -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginStart="10dp">
+
+                    <TextView
+                        android:id="@+id/title_camp_site_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tropical Eglapming"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+
+                <!-- Extra Empty View to Balance Centering -->
+                <View
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Edit Campsite"
+                    style="@style/h3"/>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switch_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:trackTint="@color/drak_gray"/>
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/img_list"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/border_linear_layout"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <!-- Left Image -->
+                <ImageView
+                    android:id="@+id/img_camp_site_left"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:elevation="2dp"
+                    android:rotation="-15"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/image_placeholder"
+                    android:translationX="-50dp"
+                    android:layout_gravity="center"
+                    android:translationY="-10dp"/>
+
+                <!-- Center Image -->
+                <ImageView
+                    android:id="@+id/img_camp_site_mid"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/image_placeholder"
+                    android:scaleType="fitCenter"
+                    android:elevation="4dp"
+                    android:layout_gravity="center"/>
+
+                <!-- Right Image -->
+                <ImageView
+                    android:id="@+id/img_camp_site_right"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/image_placeholder"
+                    android:scaleType="fitCenter"
+                    android:translationX="50dp"
+                    android:translationY="-10dp"
+                    android:rotation="15"
+                    android:elevation="2dp"
+                    android:layout_gravity="center"/>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_camp_site_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_linear_layout"
+                android:layout_marginTop="15dp"
+                android:padding="15dp"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+                <TextView
+                    style="@style/h2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textStyle="bold"
+                    app:drawableEndCompat="@drawable/edit__streamline_tabler" />
+
+                <TextView
+                    android:id="@+id/camp_site_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tropical Eglamping"
+                    style="@style/h3"
+
+                    android:alpha="0.5" />
+
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/border_linear_layout"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    style="@style/h2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Camp Types"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/campTypeRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_linear_layout"
+                android:layout_marginTop="15dp"
+                android:padding="15dp"
+                android:orientation="vertical">
+                <TextView
+                    style="@style/h2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Services"
+                    android:textStyle="bold"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/serviceRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_camp_site_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_linear_layout"
+                android:padding="15dp"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <TextView
+                    style="@style/h2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textStyle="bold"
+                    app:drawableEndCompat="@drawable/edit__streamline_tabler" />
+
+                <TextView
+                    android:id="@+id/camp_site_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Text Here"
+                    android:maxLines="5"
+                    android:textColor="@color/black"
+                    android:alpha="0.5"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_camp_site_utility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_linear_layout"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        style="@style/h2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Utility"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:drawableEnd="@drawable/add_v2"/>
+
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/utilityRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_linear_layout"
+                android:padding="15dp"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp">
+                <TextView
+                    style="@style/h2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Position"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/camp_site_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Text Here"
+                        android:maxLines="5"
+                        android:textColor="@color/black"
+                        android:alpha="0.5"/>
+                    <com.google.android.gms.maps.MapView
+                        android:id="@+id/mapView"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/border_linear_layout"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_linear_layout"
+                android:padding="15dp"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp">
+                <ProgressBar
+                    android:id="@+id/ratingProgressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    android:indeterminateTint="@color/black"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/ratingRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
